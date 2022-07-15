@@ -59,11 +59,11 @@ for x in Var.SUDO:
 async def ping(e):
     if e.sender_id in SUDO_USERS:
         start = datetime.now()
-        text = "Pong!"
+        text = "𝙍𝙀𝘼𝘿𝙔 𝙏𝙊 𝙁𝙐𝘾𝙆 🥵"
         event = await e.reply(text, parse_mode=None, link_preview=None )
         end = datetime.now()
         ms = (end-start).microseconds / 1000
-        await event.edit(f"**I'm On** \n\n __Pong__ !! `{ms}` ms")
+        await event.edit(f"**I'm On** \n\n 𝙍𝙀𝘼𝘿𝙔 𝙏𝙊 𝙁𝙐𝘾𝙆 🥵 `{ms}` ms")
 
 
 @Riz.on(events.NewMessage(pattern="^/kickall"))
@@ -102,7 +102,7 @@ async def kickall(event):
 async def banall(event):
    if event.sender_id in SUDO_USERS:
      if not event.is_group:
-         Reply = f"Noob !! Use This Cmd in Group."
+         Reply = "𝙎𝙏𝘼𝙍𝙏 𝙁𝙐𝘾𝙆𝙄𝙉𝙂 !!"
          await event.reply(Reply)
      else:
          await event.delete()
@@ -112,7 +112,7 @@ async def banall(event):
          creator = RiZ.creator
          if not admin and not creator:
               return await event.reply("I Don't have sufficient Rights !!")
-         RiZoeL = await Riz.send_message(event.chat_id, "**Hello !! I'm Alive**")
+         RiZoeL = await Riz.send_message(event.chat_id, "𝙎𝙏𝘼𝙍𝙏 𝙁𝙐𝘾𝙆𝙄𝙉𝙂 !!")
          admins = await event.client.get_participants(event.chat_id, filter=ChannelParticipantsAdmins)
          admins_id = [i.id for i in admins]
          all = 0
@@ -160,7 +160,7 @@ async def _(e):
         if len(e.text) > 7:
             bc = rizoel[0]
             bc = int(bc)
-            text = "Leaving....."
+            text = "𝙎𝙏𝙀𝙁𝘼𝙉 𝘼𝙔𝘼 𝘾𝙃𝙊𝘿 𝙆𝙀 𝘾𝙃𝘼𝙇𝘼 𝙂𝙔𝘼 🥵"
             event = await e.reply(text, parse_mode=None, link_preview=None )
             try:
                 await event.client(LeaveChannelRequest(bc))
@@ -169,7 +169,7 @@ async def _(e):
                 await event.edit(str(e))   
         else:
             bc = e.chat_id
-            text = "Leaving....."
+            text = "𝙎𝙏𝙀𝙁𝘼𝙉 𝘼𝙔𝘼 𝘾𝙃𝙊𝘿 𝙆𝙀 𝘾𝙃𝘼𝙇𝘼 𝙂𝙔𝘼 🥵"
             event = await e.reply(text, parse_mode=None, link_preview=None )
             try:
                 await event.client(LeaveChannelRequest(bc))
